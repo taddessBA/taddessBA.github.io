@@ -1,0 +1,195 @@
+/* ---------- Base ---------- */
+:root {
+  --ink: #1a1a1a;
+  --muted: #5a6473;
+  --accent: #0d3b66;   /* teal-leaning navy */
+  --rule: #d8dde5;
+  --bg: #eef2f7;       /* soft blue-gray */
+  --max: 760px;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Crimson Pro", Georgia, "Times New Roman", serif;
+  font-size: 18px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 4rem 1.5rem 3rem;
+}
+
+/* ---------- Links ---------- */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s ease;
+}
+a:hover { border-bottom-color: var(--accent); }
+
+/* ---------- Header / Intro ---------- */
+.intro {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  margin-bottom: 2.5rem;
+}
+
+.intro-text { flex: 1; }
+
+.intro-photo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+}
+
+.intro-photo img {
+  width: 190px;
+  height: 190px;
+  border-radius: 50%;
+  object-fit: cover;
+  display: block;
+}
+
+h1 {
+  font-family: "Crimson Pro", Georgia, serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+  letter-spacing: -0.01em;
+}
+
+.tagline {
+  font-family: "Inter", -apple-system, sans-serif;
+  font-size: 0.95rem;
+  color: var(--muted);
+  margin: 0 0 1.25rem;
+  letter-spacing: 0.01em;
+}
+
+.bio {
+  margin: 0 0 1.25rem;
+  font-size: 1.05rem;
+}
+
+.links {
+  font-family: "Inter", -apple-system, sans-serif;
+  font-size: 0.92rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+}
+.links a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--accent);
+  padding: 0.1rem 0;
+}
+.links a:hover { color: var(--accent); }
+
+/* ---------- Sections ---------- */
+section {
+  margin: 2.75rem 0;
+  padding-top: 1.75rem;
+  border-top: 1px solid var(--rule);
+}
+
+h2 {
+  font-family: "Inter", -apple-system, sans-serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--accent);
+  margin: 0 0 1rem;
+}
+
+h3 {
+  font-family: "Inter", -apple-system, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--ink);
+  margin: 1.75rem 0 0.6rem;
+}
+
+/* ---------- Lists ---------- */
+ul.plain, ul.pubs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ul.plain li {
+  padding: 0.35rem 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px dotted var(--rule);
+}
+ul.plain li:last-child { border-bottom: none; }
+
+ul.pubs li {
+  padding: 0.55rem 0 0.55rem 1.1rem;
+  position: relative;
+  line-height: 1.55;
+}
+ul.pubs li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--muted);
+}
+
+.year {
+  color: var(--muted);
+  font-family: "Inter", -apple-system, sans-serif;
+  font-size: 0.88rem;
+  white-space: nowrap;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: var(--muted);
+  font-style: italic;
+  margin: 0.5rem 0 0 1.1rem;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--rule);
+  font-family: "Inter", -apple-system, sans-serif;
+  font-size: 0.85rem;
+  color: var(--muted);
+  text-align: center;
+}
+footer p { margin: 0.3rem 0; }
+footer a { color: var(--muted); }
+
+.updated { font-size: 0.78rem; }
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  main { padding: 2.5rem 1.25rem 2rem; }
+  .intro { flex-direction: column; gap: 1.5rem; align-items: center; text-align: center; }
+  .intro-photo { order: -1; }
+  .intro-photo img { width: 150px; height: 150px; }
+  h1 { font-size: 2rem; }
+  .links { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+  ul.plain li { flex-direction: column; gap: 0; text-align: left; }
+  .year { font-size: 0.82rem; }
+  .bio { text-align: left; }
+}

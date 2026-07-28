@@ -5,7 +5,7 @@
   --accent: #0d3b66;   /* teal-leaning navy */
   --rule: #d8dde5;
   --bg: #eef2f7;       /* soft blue-gray */
-  --max: 760px;
+  --max: 880px;
 }
 
 * { box-sizing: border-box; }
@@ -16,8 +16,8 @@ html, body {
   background: var(--bg);
   color: var(--ink);
   font-family: "Crimson Pro", Georgia, "Times New Roman", serif;
-  font-size: 18px;
-  line-height: 1.6;
+  font-size: 19px;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
 }
 

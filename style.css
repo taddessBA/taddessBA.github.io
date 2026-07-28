@@ -5,7 +5,7 @@
   --accent: #0d3b66;   /* teal-leaning navy */
   --rule: #d8dde5;
   --bg: #eef2f7;       /* soft blue-gray */
-  --max: 880px;
+  --max: 1040px;
 }
 
 * { box-sizing: border-box; }
@@ -24,7 +24,7 @@ html, body {
 main {
   max-width: var(--max);
   margin: 0 auto;
-  padding: 4rem 1.5rem 3rem;
+  padding: 3rem 1.5rem 2.5rem;
 }
 
 /* ---------- Links ---------- */
@@ -81,6 +81,7 @@ h1 {
 .bio {
   margin: 0 0 1.25rem;
   font-size: 1.05rem;
+  max-width: 720px;
 }
 
 .links {
@@ -101,8 +102,8 @@ h1 {
 
 /* ---------- Sections ---------- */
 section {
-  margin: 2.75rem 0;
-  padding-top: 1.75rem;
+  margin: 1.9rem 0;
+  padding-top: 1.2rem;
   border-top: 1px solid var(--rule);
 }
 
@@ -121,7 +122,7 @@ h3 {
   font-size: 0.95rem;
   font-weight: 600;
   color: var(--ink);
-  margin: 1.75rem 0 0.6rem;
+  margin: 1.4rem 0 0.5rem;
 }
 
 /* ---------- Lists ---------- */
@@ -141,7 +142,7 @@ ul.plain li {
 ul.plain li:last-child { border-bottom: none; }
 
 ul.pubs li {
-  padding: 0.55rem 0 0.55rem 1.1rem;
+  padding: 0.4rem 0 0.4rem 1.1rem;
   position: relative;
   line-height: 1.55;
 }
